@@ -18,24 +18,29 @@ public class RpsTest {
 
     @Before
     public void before(){
-    game1 = new Rps("Scissors");
-    game2 = new Rps("Rock");
-    game3 = new Rps("Paper");
+    game1 = new Rps("scissors");
+    game2 = new Rps("rock");
+    game3 = new Rps("paper");
     }
 
     @Test
     public void canDrawScissors(){
-        assertEquals("Draw", game1.checkDraw("Scissors"));
+        assertEquals("Draw", game1.checkDraw("scissors"));
     }
 
     @Test
     public void canDrawRock(){
-        assertEquals("Draw", game2.checkDraw("Rock"));
+        assertEquals("Draw", game2.checkDraw("rock"));
     }
 
     @Test
     public void canDrawPaper(){
-        assertEquals("Draw", game3.checkDraw("Paper"));
+        assertEquals("Draw", game3.checkDraw("paper"));
+    }
+
+    @Test
+    public void canWinWithScissors(){
+        assertEquals(true, game1.checkWin("paper"));
     }
 
 
