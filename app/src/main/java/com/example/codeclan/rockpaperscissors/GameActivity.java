@@ -37,4 +37,28 @@ public class GameActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void onClickPaperButton(View button){
+        String compHand = game.computersHand();
+        String result = game.checkGame("paper", compHand);
+
+        Intent intent = new Intent(this, ResultActivity.class);
+
+        intent.putExtra("computer", compHand);
+        intent.putExtra("results", result);
+
+        startActivity(intent);
+    }
+
+    public void onClickScissorsButton(View button){
+        String compHand = game.computersHand();
+        String result = game.checkGame("scissors", compHand);
+
+        Intent intent = new Intent(this, ResultActivity.class);
+
+        intent.putExtra("computer", compHand);
+        intent.putExtra("results", result);
+
+        startActivity(intent);
+    }
+
 }
