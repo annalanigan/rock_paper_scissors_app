@@ -25,47 +25,47 @@ public class RpsTest {
 
     @Test
     public void canDrawScissors(){
-        assertEquals(true, game1.checkDraw("scissors"));
+        assertEquals(true, game1.checkDraw("scissors", "scissors"));
     }
 
     @Test
     public void canDrawRock(){
-        assertEquals(true, game2.checkDraw("rock"));
+        assertEquals(true, game2.checkDraw("rock", "rock"));
     }
 
     @Test
     public void canDrawPaper(){
-        assertEquals(true, game3.checkDraw("paper"));
+        assertEquals(true, game3.checkDraw("paper","paper"));
     }
 
     @Test
     public void canWinWithScissors(){
-        assertEquals(true, game1.checkWin("paper"));
+        assertEquals(true, game1.checkWin("scissors", "paper"));
     }
 
     @Test
     public void canWinWithRock(){
-        assertEquals(true, game2.checkWin("scissors"));
+        assertEquals(true, game2.checkWin("rock", "scissors"));
     }
 
     @Test
     public void canWinWithPaper(){
-        assertEquals(true, game3.checkWin("rock"));
+        assertEquals(true, game3.checkWin("paper","rock"));
     }
 
     @Test
     public void canLoseWithScissors(){
-        assertEquals(true, game1.checkLoss("rock"));
+        assertEquals(true, game1.checkLoss("scissors","rock"));
     }
 
     @Test
     public void canLossWithRock(){
-        assertEquals(true, game2.checkLoss("paper"));
+        assertEquals(true, game2.checkLoss("rock","paper"));
     }
 
     @Test
     public void canLossWithPaper(){
-        assertEquals(true, game3.checkLoss("scissors"));
+        assertEquals(true, game3.checkLoss("paper","scissors"));
     }
 
 

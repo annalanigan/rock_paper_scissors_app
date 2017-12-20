@@ -8,11 +8,9 @@ import java.util.HashMap;
 
 public class Rps {
 
-    private String playerMove;
     private HashMap<String, String> winCheck;
 
     public Rps(String inputMove) {
-        this.playerMove = inputMove;
         this.winCheck = new HashMap<>();
         winCheck.put("scissors", "paper");
         winCheck.put("paper", "rock");
@@ -20,19 +18,22 @@ public class Rps {
     }
 
 
-    public Boolean checkDraw(String compInput) {
+    public Boolean checkDraw(String playerMove, String compInput) {
         return compInput == playerMove ? true : false;
     }
 
 
-    public Boolean checkWin(String compInput) {
+    public Boolean checkWin(String playerMove, String compInput) {
         String value = winCheck.get(playerMove);
         return value == compInput ? true : false ;
     }
 
 
-    public Boolean checkLoss(String comInput) {
+    public Boolean checkLoss(String playerMove, String comInput) {
         String value = winCheck.get(comInput);
         return value == playerMove ? true : false;
     }
+
+
+
 }
