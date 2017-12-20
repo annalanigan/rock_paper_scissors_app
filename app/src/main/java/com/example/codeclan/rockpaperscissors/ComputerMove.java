@@ -28,7 +28,7 @@ public class ComputerMove {
     }
 
 
-    public Object getRandom() {
+    public String getRandom() {
         Collections.shuffle(this.move);
         return this.move.get(0);
     }

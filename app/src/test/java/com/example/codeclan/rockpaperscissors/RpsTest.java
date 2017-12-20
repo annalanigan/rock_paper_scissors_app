@@ -18,9 +18,9 @@ public class RpsTest {
 
     @Before
     public void before(){
-    game1 = new Rps("scissors");
-    game2 = new Rps("rock");
-    game3 = new Rps("paper");
+    game1 = new Rps();
+    game2 = new Rps();
+    game3 = new Rps();
     }
 
     @Test
@@ -68,6 +68,11 @@ public class RpsTest {
         assertEquals(true, game3.checkLoss("paper","scissors"));
     }
 
+
+    @Test
+    public void canPlay_Win(){
+        assertEquals("You Win!", game1.checkGame("scissors", "paper"));
+    }
 
 
 

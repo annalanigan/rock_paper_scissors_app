@@ -7,12 +7,43 @@
     tools:context="com.example.codeclan.rockpaperscissors.GameActivity">
 
     <TextView
+        android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/welcome"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/rock_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ROCK"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="179dp" />
+
+    <Button
+        android:id="@+id/paper_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="PAPER"
+        app:layout_constraintBottom_toTopOf="@+id/scissors_button"
+        app:layout_constraintTop_toBottomOf="@+id/rock_button"
+        tools:layout_editor_absoluteX="148dp" />
+
+    <Button
+        android:id="@+id/scissors_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SCISSORS"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="365dp" />
 
 </android.support.constraint.ConstraintLayout>
