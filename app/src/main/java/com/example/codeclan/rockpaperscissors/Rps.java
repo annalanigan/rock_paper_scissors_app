@@ -10,6 +10,10 @@ public class Rps {
 
     private HashMap<String, String> winCheck;
     private ComputerMove computerMove;
+    private Integer playerScore;
+    private Integer computerScore;
+
+
 
     public Rps() {
         this.winCheck = new HashMap<>();
@@ -17,6 +21,17 @@ public class Rps {
         winCheck.put("paper", "rock");
         winCheck.put("rock", "scissors");
         this.computerMove = new ComputerMove();
+        playerScore = 0;
+        computerScore = 0;
+
+    }
+
+    public Integer getPlayerScore() {
+        return playerScore;
+    }
+
+    public Integer getComputerScore() {
+        return computerScore;
     }
 
     public String computersHand(){
@@ -43,9 +58,11 @@ public class Rps {
            result = "It's a Draw";
        }
        else if (this.checkWin(player, computer)){
+           playerScore += 1;
            result = "You Win!";
        }
        else if (this.checkLoss(player, computer)){
+           computerScore += 1;
             result = "You Lose!";
        }
         return result;

@@ -68,12 +68,15 @@ public class RpsTest {
         assertEquals(true, game3.checkLoss("paper","scissors"));
     }
 
-
     @Test
     public void canPlay_Win(){
         assertEquals("You Win!", game1.checkGame("scissors", "paper"));
     }
 
-
-
+    @Test
+    public void canAddToScore() {
+        game1.checkGame("scissors", "paper");
+        game1.checkGame("scissors", "paper");
+        assertEquals((Integer)2, game1.getPlayerScore());
+    }
 }

@@ -3,6 +3,7 @@ package com.example.codeclan.rockpaperscissors;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
@@ -26,5 +27,10 @@ public class ResultActivity extends AppCompatActivity {
         this.computerHand.setText(computersHand);
         this.result.setText(result);
 
+    }
+
+    public void onClickPlayAgain(View button){
+        Intent intent = new Intent(this, GameActivity.class);
+        startActivity(intent);
     }
 }
