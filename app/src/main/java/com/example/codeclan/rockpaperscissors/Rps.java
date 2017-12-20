@@ -20,19 +20,19 @@ public class Rps {
     }
 
 
-    public String checkDraw(String compInput) {
-        String output = "";
-        if (playerMove == compInput) {
-            output = "Draw";
-        }
-        return output;
+    public Boolean checkDraw(String compInput) {
+        return compInput == playerMove ? true : false;
     }
 
 
-    public boolean checkWin(String compInput) {
+    public Boolean checkWin(String compInput) {
         String value = winCheck.get(playerMove);
         return value == compInput ? true : false ;
     }
 
-    
+
+    public Boolean checkLoss(String comInput) {
+        String value = winCheck.get(comInput);
+        return value == playerMove ? true : false;
+    }
 }
